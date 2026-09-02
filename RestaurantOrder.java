@@ -15,10 +15,19 @@ public class RestaurantOrder {
     // Returns the price of the selected item
     public static double getItemPrice(int itemNumber) {
         // TODO: Return the correct price based on itemNumber
- 
-        return 0.0;
+        if (itemNumber == 1) {
+        return 5.99; //Burger price
+        } else if (itemNumber == 2) {
+        return 8.99; //Pizza price
+        } else if (itemNumber == 3) {
+        return 4.99; //Salad price
+        } else if (itemNumber == 4) {
+        return 1.99; //Soda price
+        } else {
+        return 0.0; //Invalid menu number
+        }
+
     }
- 
     // Allows the customer to place an order
     // and returns the subtotal
     public static double takeOrder() {
