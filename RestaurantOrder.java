@@ -1,8 +1,9 @@
 import java.util.Scanner;
  
 public class RestaurantOrder {
- 
+
     // Displays the restaurant menu
+    
     public static void displayMenu() {
         System.out.println("===== RESTAURANT MENU =====");
         System.out.println("1. Burger - $5.99");
@@ -26,6 +27,7 @@ public class RestaurantOrder {
         } else {
         return 0.0; //Invalid menu number
         }
+        
 
     }
     // Allows the customer to place an order
@@ -49,8 +51,10 @@ public class RestaurantOrder {
             // TODO:
             // Call getItemPrice()
             // Add the returned price to totalCost
+            
  
-            System.out.println("Enter another item number (0 to finish):");
+            System.out.println("Enter another item number (0 to finish): ");
+
         }
  
         // TODO: Return the subtotal
@@ -76,6 +80,7 @@ public class RestaurantOrder {
     public static void main(String[] args) {
  
         displayMenu();
+        takeOrder();
  
         // TODO:
         // Call takeOrder() and store the returned subtotal
