@@ -4,6 +4,7 @@ public class RestaurantOrder {
 
     // Displays the restaurant menu
     
+    
     public static void displayMenu() {
         System.out.println("===== RESTAURANT MENU =====");
         System.out.println("1. Burger - $5.99");
@@ -64,6 +65,10 @@ public class RestaurantOrder {
         scanner.close();
  
         // TODO: Return the subtotal
+        System.out.println("==========================");
+        System.out.println("ORDER TOTAL");
+        System.out.println("=========================="); 
+        
         System.out.println("Subtotal: $" + totalCost);
         return totalCost;
     }
@@ -80,8 +85,11 @@ public class RestaurantOrder {
     public static double calculateTotal(double totalCost, double discount) {
  
         // TODO: Calculate and return the discounted total
+        double percent = discount * 100;
         double discountCost = totalCost - (totalCost * discount);
 
+        System.out.println("Discount: " + percent + "%");
+        System.out.println("With the 10% discount added: $" + String.format("%.2f%n", discountCost));
         return discountCost;
     }
  
@@ -102,11 +110,10 @@ public class RestaurantOrder {
         // TODO:
         // Call calculateTotal() using the subtotal
 
-        calculateTotal(subtotal);
-
-        //calculateTotal();
+        calculateTotal(subtotal); //without discount
  
         // TODO:
         // Display the final total
+        calculateTotal(subtotal, .10); //with discount
     }
 }
