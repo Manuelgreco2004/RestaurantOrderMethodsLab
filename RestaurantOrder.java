@@ -40,8 +40,8 @@ public class RestaurantOrder {
         System.out.println();
         System.out.println("Enter an item number (0 to finish):");
  
+        // Looping and selection code is provided for you.
         while (true) {
- 
             int choice = scanner.nextInt();
  
             if (choice == 0) {
@@ -80,10 +80,16 @@ public class RestaurantOrder {
     public static void main(String[] args) {
  
         displayMenu();
-        takeOrder();
+        //testing for Part 1
+        System.out.println(getItemPrice(1)); 
+        System.out.println(getItemPrice(2)); 
+        System.out.println(getItemPrice(3)); 
+        System.out.println(getItemPrice(4));
  
         // TODO:
         // Call takeOrder() and store the returned subtotal
+
+        takeOrder();
  
         // TODO:
         // Call calculateTotal() using the subtotal
