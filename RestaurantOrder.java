@@ -43,14 +43,20 @@ public class RestaurantOrder {
         // Looping and selection code is provided for you.
         while (true) {
             int choice = scanner.nextInt();
- 
+
+            double price = getItemPrice(choice);
+            totalCost += price;
+
             if (choice == 0) {
                 break;
             }
  
             // TODO:
             // Call getItemPrice()
+
+
             // Add the returned price to totalCost
+
             
  
             System.out.println("Enter another item number (0 to finish): ");
@@ -58,7 +64,9 @@ public class RestaurantOrder {
         }
  
         // TODO: Return the subtotal
-        return 0.0;
+        System.out.println("");
+        System.out.println("The subtotal is: " + totalCost);
+        return totalCost;
     }
  
     // Returns the total without a discount
@@ -66,7 +74,7 @@ public class RestaurantOrder {
  
         // TODO: Return the total cost
  
-        return 0.0;
+        return totalCost;
     }
  
     // Returns the total after applying a discount
