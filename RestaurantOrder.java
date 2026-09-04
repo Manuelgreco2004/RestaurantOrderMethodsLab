@@ -45,6 +45,7 @@ public class RestaurantOrder {
             int choice = scanner.nextInt();
 
             double price = getItemPrice(choice);
+            System.out.println("This will cost: " + price);
             totalCost += price;
 
             if (choice == 0) {
@@ -54,18 +55,16 @@ public class RestaurantOrder {
             // TODO:
             // Call getItemPrice()
 
-
             // Add the returned price to totalCost
 
-            
- 
             System.out.println("Enter another item number (0 to finish): ");
 
+
         }
+        scanner.close();
  
         // TODO: Return the subtotal
-        System.out.println("");
-        System.out.println("The subtotal is: " + totalCost);
+        System.out.println("Subtotal: $" + totalCost);
         return totalCost;
     }
  
@@ -73,7 +72,7 @@ public class RestaurantOrder {
     public static double calculateTotal(double totalCost) {
  
         // TODO: Return the total cost
- 
+        System.out.println("Total: $" + totalCost);
         return totalCost;
     }
  
@@ -81,8 +80,9 @@ public class RestaurantOrder {
     public static double calculateTotal(double totalCost, double discount) {
  
         // TODO: Calculate and return the discounted total
- 
-        return 0.0;
+        double discountCost = totalCost - (totalCost * discount);
+
+        return discountCost;
     }
  
     public static void main(String[] args) {
@@ -97,10 +97,14 @@ public class RestaurantOrder {
         // TODO:
         // Call takeOrder() and store the returned subtotal
 
-        takeOrder();
+        double subtotal = takeOrder();
  
         // TODO:
         // Call calculateTotal() using the subtotal
+
+        calculateTotal(subtotal);
+
+        //calculateTotal();
  
         // TODO:
         // Display the final total
